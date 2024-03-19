@@ -1,0 +1,40 @@
+<script>
+function updateObjectStyle() {
+    var object1 = document.getElementById('your-object-id');
+    var rect1 = object1.getBoundingClientRect();
+    var progress1 = (window.innerHeight - rect1.top - 20) / (window.innerHeight - 20);
+    progress1 = Math.min(Math.max(progress1, 0), 1);
+    if (progress1 > 0.5) {
+        var scale1 = 1 - 0.4 * (progress1 - 0.5);
+        object1.style.transform = 'translate3d(0px, 0px, 0px) scale3d(' + scale1 + ', ' + scale1 + ', 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
+    }
+
+    var object2 = document.getElementById('your-object-idd');
+    var rect2 = object2.getBoundingClientRect();
+    var progress2 = (window.innerHeight - rect2.top - 40) / (window.innerHeight - 40);
+    progress2 = Math.min(Math.max(progress2, 0), 1);
+    if (progress2 > 0.5) {
+        var scale2 = 1 - 0.3 * (progress2 - 0.5);
+        object2.style.transform = 'translate3d(0px, 0px, 0px) scale3d(' + scale2 + ', ' + scale2 + ', 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
+    }
+    var object3 = document.getElementById('your-object-iddd');
+    var rect3 = object3.getBoundingClientRect();
+    var progress3 = (window.innerHeight - rect3.top - 60) / (window.innerHeight - 60);
+    progress3 = Math.min(Math.max(progress3, 0), 1);
+    if (progress3 > 0.5) {
+        var scale3 = 1 - 0.2 * (progress3 - 0.5);
+        object3.style.transform = 'translate3d(0px, 0px, 0px) scale3d(' + scale3 + ', ' + scale3 + ', 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
+    }
+    var object4 = document.getElementById('your-object-idddd');
+    var rect4 = object4.getBoundingClientRect();
+    var progress4 = (window.innerHeight - rect4.top - 80) / (window.innerHeight - 80);
+    progress4 = Math.min(Math.max(progress4, 0), 1);
+    if (progress4 > 0.5) {
+        var scale4 = 1 - 0.1 * (progress4 - 0.5);
+        object4.style.transform = 'translate3d(0px, 0px, 0px) scale3d(' + scale4 + ', ' + scale4 + ', 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
+    }
+}
+
+window.addEventListener('load', updateObjectStyle);
+window.addEventListener('scroll', updateObjectStyle);
+</script>
